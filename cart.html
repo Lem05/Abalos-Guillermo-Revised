@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abalos-Guillermo Optical Clinic</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="shop.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Abalos-Guillermo Optical</a>
+          
+          <a href="location.html" type="button" class="btn btn-outline-light">Shopping Cart</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto justify-content-center mb-2 mb-lg-0">
+              <li class="nav-item ms-3">
+                <a class="nav-link active" aria-current="page" href="shopping-cart.html">Women's Eyewear</a>
+              </li>
+              <li class="nav-item ms-3 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="men-eyewear.html">Men Eyewear</a></li>
+                  <li><a class="dropdown-item" href="women-eyewear.html">Women Eyewear</a></li>
+                  <li><a class="dropdown-item" href="kids-eyewear.html">Kids Eyewear</a></li>
+                </ul>
+                <li class="nav-item ms-3">
+                    <a class="nav-link" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAApxJREFUSEuVVv194zAIfWiRJpPUmeSaSZpO0nSSupOcbxHRH5JsgZBsn/9JbH0Aj8cDwt5DALhscP87i+mT/j6+XHYB+kDnXF22xgi8+eVMlENpz8BHa1gHOIiAI19A+APgH4CFiOZ6N0E7pL9X+AAaIdgDjJkvAD4BTOKfZCFDhgXAjYjkNz8j5MpiObeb6XRHjDyB+DvdqCzmk+mDGL3b6DtgFoeGhluHmcUopmrTWk9vjIUCXXc5tm/Y5omZ3wrEKsBi2Ed/IwrzEG+Vib20ZCCZ3wE8BFKGOOXtq2Q9iOjDJ0+FyvWOZl+JuOythu02HWyBWvB+EoW7J5dNXma1Y6D1jjkKiyXHw6caTgR7eqgbw6Ob9LZURoy/G8aVyRr09aprIFpyMB3lMDker29+ZYLx51a5a01ZckktF2LtxTzMcR8H5vjOoIevwUS6Ryik6olPe6O642B7gY45CuwTCK8F8QWEr6pao3tOkUslgrX6eYKszatGdC7eYcT947sC3M1P5ZiulKZJpJOd+irNQUrqZW0QrZiURvEjv4Fo9qz2KFpPlWMxt7+tG7XyoVWsriWaSx1/mG5lDq+s7iAYmSc6EA1dzp3msQBJxax8FkR9ZWRtzkrlNLGnF0q3XZZ5AehOgeZWHj25pN3G3AI9W1wrKq240zyqj0sIdG1nJBexaQijiPdE204mKxx3CuFpRp+2/phFFvGmRP9/Ak/TQJ1SNs9nonCrs1hHMjmyNAOZrTojTsvrVblHKdj2y0B41adNjsWjyOzF6ABa62NnJMpRqMlkdbg2/MO+29Tr9nqCDqZzGXJF5gtBYLYsHRk7/q4YRGFu5+3uDNzmY4j/uZ6gCb0p80EGxzcfN5Kds27pTFs+QbZGml3Ev8diRzXU+CcbAAAAAElFTkSuQmCC"/></a>
+                  </li>
+                  <button type="button" class="btn btn-link position-relative">
+                    <i class='bx bxs-shopping-bags'></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                      <span class="visually-hidden">Cart Item</span>
+                    </span>
+                  </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="cart-container" class="container my-5">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+             
+            </tbody>
+        </table>
+      </div>
+      <div id="cart-bottom" class="container">
+        <div class="row">
+            <div class="coupon text-dark col-lg-6 col-md-6 col-12 mb-4">
+                <input type="text" name="" id="" placeholder="Coupon Code">
+                <button class="coupon1 my-3">Apply Coupon</button>
+            </div>
+            <div class="total col-lg-6 col-md-6 col-12">
+                <h5 class="text-center fs-4">CART TOTAL</h5>
+                <div class="d-flex justify-content-between">
+                    <h5 class="fs-5">Sub total</h5>
+                    <p class="text-dark sub-total">₱1299</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <h5>Shipping</h5>
+                    <p>Free</p>
+                </div>
+                <hr class="second-hr">
+                <div class="d-flex justify-content-between">
+                    <h5 class="fs-4">Grand Total</h5>
+                    <p class="fs-4 grand-total">₱1299</p>
+                </div>
+                <button class="checkout-botton">Proceed To Checkout</button>
+            </div>
+        </div>
+      </div>
+    <footer class="bg-primary">
+      <div class="footer-title">
+        <h2 class="email-text text-light">Subscribe to Our Newsletter</h2>
+      </div>
+      <div class="form">
+        <form action="#">
+          <div class="form-box">
+            <input type="email" name="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </div>
+      </form>
+    </div>
+  <div class="footer-nav">
+    <div class="quick-links">
+      <h2 class="links">Quick Links</h2>
+      <a href="#" class="btn btn-link text-light">Home</a>
+      <a href="#" class="btn btn-link text-light">About</a>
+      <a href="#" class="btn btn-link text-light">Contact</a>
+    </div>
+    <div class="social-icons">
+      <h2 class="quick-links">Follow Us</h2>
+        <div class="social-logo">
+        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+        <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+    </div>
+    <div class="quick-links">
+      <h2 class="links">Terms and Conditions</h2>
+      <a href="#" class="btn btn-link text-light">Privacy</a>
+      <a href="#" class="btn btn-link text-light">Shipping</a>
+      <a href="#" class="btn btn-link text-light">Refund</a>
+    </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; Abalos-Guillermo Optical Clinic | All Rights Reserved</p>
+      <p>Design by: KodegoPro</p>
+    </div>
+    </footer>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

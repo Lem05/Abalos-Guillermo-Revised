@@ -1,0 +1,39 @@
+.branch-name{
+    text-align: center;
+    font-family: Poppins;
+    font-size: 44px;
+
+}
+.location-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.location-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.location-title p{
+    font-size: 20px;
+    text-align: center;
+}
+.branch-container{
+    display: flex;
+    justify-content: space-around;
+}
+.branch-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: azure;
+    padding: 0 20px;
+    width: 18rem;
+}
+.branch-title, h3{
+    font-size: 24px;
+}
+.btn-success{
+    margin-top: 20px;
+    font-size: 20px;
+}

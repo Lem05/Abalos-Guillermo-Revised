@@ -1,0 +1,85 @@
+
+.sproduct input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.sproduct input:focus{
+    outline: none;
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/*Cart CSS*/
+#cart-container{
+    overflow-x: auto;
+}
+#cart-container table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+table thead{
+    font-weight: 700;
+}
+#cart-container table thead td{
+    background-color: rgb(83, 83, 83);
+    color: white;
+    padding: 6px 0;
+    border: none;
+}
+#cart-container table td{
+    border: 1px solid rgb(110, 108, 108);
+    text-align: center;
+}
+#cart-container table td:nth-child(1){
+    width: 100px;
+}
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3){
+    width: 200px;
+}
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6){
+    width: 170px;
+}
+#cart-container table tbody img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+#cart-bottom .coupon input{
+    padding-left: 10px;
+    color: black;
+    height: 44px;
+    border: 1px solid rgb(182, 183, 184);
+    border-radius: 5px;
+}
+#cart-bottom .coupon input:focus{
+    outline: none;
+}
+.coupon1{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(4, 92, 255);
+    color: white;
+    padding: 10px 15px;
+}
+.checkout-botton{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(4, 92, 255);
+    color: white;
+    padding: 10px 15px;
+    float: right;
+}
