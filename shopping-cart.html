@@ -11,27 +11,30 @@
     <script src="bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="shopping-cart.css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <!--This is NavBar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Abalos-Guillermo Optical</a>
-          
-          <a href="location.html" type="add-to-cart" class="btn btn-outline-light">Branch Location</a>
-          <add-to-cart class="navbar-toggler" type="add-to-cart" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </add-to-cart>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto justify-content-center mb-2 mb-lg-0">
+          <a class="navbar-brand" href="index.html">Abalos-Guillermo Optical</a> 
+          <div class="nav-links" id="navLinks">
+            <i class='bx bxs-x-square' onclick="navClose()" id="close"></i>
+            <ul class="navbar-nav">
               <li class="nav-item ms-3">
-                <a class="nav-link active" aria-current="page" href="shopping-cart.html">Shop</a>
+                <a href="location.html" type="button" class="btn btn-outline-light">Branch Location</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link" aria-current="page" href="shopping-cart.html">Shop</a>
               </li>
               <li class="nav-item ms-3 dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="add-to-cart" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,30 +42,92 @@
                   <li><a class="dropdown-item" href="women-eyewear.html">Women Eyewear</a></li>
                   <li><a class="dropdown-item" href="kids-eyewear.html">Kids Eyewear</a></li>
                 </ul>
-                <li class="nav-item ms-3">
-                    <a class="nav-link" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAApxJREFUSEuVVv194zAIfWiRJpPUmeSaSZpO0nSSupOcbxHRH5JsgZBsn/9JbH0Aj8cDwt5DALhscP87i+mT/j6+XHYB+kDnXF22xgi8+eVMlENpz8BHa1gHOIiAI19A+APgH4CFiOZ6N0E7pL9X+AAaIdgDjJkvAD4BTOKfZCFDhgXAjYjkNz8j5MpiObeb6XRHjDyB+DvdqCzmk+mDGL3b6DtgFoeGhluHmcUopmrTWk9vjIUCXXc5tm/Y5omZ3wrEKsBi2Ed/IwrzEG+Vib20ZCCZ3wE8BFKGOOXtq2Q9iOjDJ0+FyvWOZl+JuOythu02HWyBWvB+EoW7J5dNXma1Y6D1jjkKiyXHw6caTgR7eqgbw6Ob9LZURoy/G8aVyRr09aprIFpyMB3lMDker29+ZYLx51a5a01ZckktF2LtxTzMcR8H5vjOoIevwUS6Ryik6olPe6O642B7gY45CuwTCK8F8QWEr6pao3tOkUslgrX6eYKszatGdC7eYcT947sC3M1P5ZiulKZJpJOd+irNQUrqZW0QrZiURvEjv4Fo9qz2KFpPlWMxt7+tG7XyoVWsriWaSx1/mG5lDq+s7iAYmSc6EA1dzp3msQBJxax8FkR9ZWRtzkrlNLGnF0q3XZZ5AehOgeZWHj25pN3G3AI9W1wrKq240zyqj0sIdG1nJBexaQijiPdE204mKxx3CuFpRp+2/phFFvGmRP9/Ak/TQJ1SNs9nonCrs1hHMjmyNAOZrTojTsvrVblHKdj2y0B41adNjsWjyOzF6ABa62NnJMpRqMlkdbg2/MO+29Tr9nqCDqZzGXJF5gtBYLYsHRk7/q4YRGFu5+3uDNzmY4j/uZ6gCb0p80EGxzcfN5Kds27pTFs+QbZGml3Ev8diRzXU+CcbAAAAAElFTkSuQmCC"/></a>
+                  <li class="nav-item ms-3">
+                    <a class="nav-link" href="#">Login</a>
                   </li>
-                  <add-to-cart type="add-to-cart" class="btn btn-link position-relative">
-                    <i class='bx bxs-shopping-bags'></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      0
-                      <span class="visually-hidden">unread messages</span>
-                    </span>
-                  </add-to-cart>
+                  <li class="nav-item ms-3">
+                    <i class='bx bxs-shopping-bags'id="cart" ><span class="cart-quantity cart-btn text-light">0</span></i>
+                  </li>
               </li>
             </ul>
           </div>
         </div>
+        <i class='bx bx-menu-alt-right' onclick="navOpen()" id="open"></i>
       </nav>
-      <section class="shop-title">
-        <h2 class="section-title">Shop Now</h2>
-      </section>
-    <div class="shop-container">
-      <!--Insert Products Here via JS-->
+
+      <!--This is Cart Modal-->
+    <div class="cart-modal-overlay">
+      <div class="cart-modal">
+        <i id="close-btn" class="fas fa-times"></i>
+          <h1 class="cart-is-empty">Cart is empty</h1>
+          <div class="product-rows">
+          </div>
+          <div class="total">
+            <h1 class="cart-total">TOTAL</h1>
+              <span class="total-price">₱0</span>
+                <button class="purchase-btn">Proceed to Checkout</button>
+          </div>
+      </div>
     </div>
+
+
+    <!--This is Products-->
+    <div class="items-container">
+      <div class="card-1 card">
+        <img class="product-image" src="img/glass2.jpeg" alt="">
+          <button class="add-to-cart">Add to cart</button>
+          <div class="product-name">Rayban</div>
+            <span class="product-price">₱1395</span>
+      </div>
+      <div class="card-2 card">
+        <img class="product-image" src="img/glass3.jpeg" alt="">
+        <button class="add-to-cart">Add to cart</button>
+        <div class="product-name">Gucci</div>
+          <span class="product-price">₱1175</span>
+      </div>
+      <div class="card-3 card">
+        <img class="product-image" src="img/glass4.jpeg" alt="">
+          <button class="add-to-cart">Add to cart</button>
+          <div class="product-name">Aokley</div>
+            <span class="product-price">₱1150</span>
+      </div>
+      <div class="card-4 card">
+        <img class="product-image" src="img/glass10.png" alt="">
+           <button class="add-to-cart">Add to cart</button>
+           <div class="product-name">Lacoste</div>
+          <span class="product-price">₱1575</span>
+      </div>
+      <div class="card-5 card">
+        <img class="product-image" src="img/glass11.png" alt="">
+        <button class="add-to-cart">Add to cart</button>
+        <div class="product-name">Rudy Project</div>
+        <span class="product-price">₱1230</span>
+      </div>
+      <div class="card-6 card">
+        <img class="product-image" src="img/glass7.jpeg" alt="">
+        <button class="add-to-cart">Add to cart</button>
+        <div class="product-name">Rayban Classic</div>
+        <span class="product-price">₱1230</span>
+      </div>
+      <div class="card-6 card">
+        <img class="product-image" src="img/glass8.jpeg" alt="">
+        <button class="add-to-cart">Add to cart</button>
+        <div class="product-name">Dior</div>
+        <span class="product-price">₱1230</span>
+      </div>
+      <div class="card-8 card">
+        <img class="product-image" src="img/glass12.png" alt="">
+        <button class="add-to-cart">Add to cart</button>
+        <div class="product-name">Levis</div>
+        <span class="product-price">₱1230</span>
+      </div>
+    </div>  
+
+
+    <!--This is Footer-->
     <footer class="bg-primary">
       <div class="footer-title">
-        <h2 class="tex-center text-light">Subscribe to Our Newsletter</h2>
+        <h2 class="email-text text-light">Subscribe to Our Newsletter</h2>
       </div>
       <div class="form">
         <form action="#">
@@ -74,32 +139,42 @@
     </div>
   <div class="footer-nav">
     <div class="quick-links">
-      <h2 class="links fs-3">Quick Links</h2>
+      <h2 class="links">Quick Links</h2>
       <a href="#" class="btn btn-link text-light">Home</a>
       <a href="#" class="btn btn-link text-light">About</a>
       <a href="#" class="btn btn-link text-light">Contact</a>
     </div>
     <div class="social-icons">
-      <h2 class="quick-links fs-3">Follow Us</h2>
+      <h2 class="quick-links">Follow Us</h2>
         <div class="social-logo">
-        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-        <a href="#"><i class='bx bxl-youtube'></i></a>
-        <a href="#"><i class='bx bxl-instagram' ></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+          <a href="#"><i class='bx bxl-instagram' ></i></a>
         </div>
     </div>
     <div class="quick-links">
-      <h2 class="links fs-3">Terms and Conditions</h2>
+      <h2 class="links">Terms and Conditions</h2>
       <a href="#" class="btn btn-link text-light">Privacy</a>
       <a href="#" class="btn btn-link text-light">Shipping</a>
       <a href="#" class="btn btn-link text-light">Refund</a>
     </div>
     </div>
     <div class="copyright">
-      <p>&copy; Abalos-Guillermo Optical Clinic | All Rights Reserved</p>
+      <p>&copy; Abalos-Guillermo Optical Clinic <br> All Rights Reserved</p>
       <p>Design by: KodegoPro</p>
     </div>
     </footer>
-<script src="product.js"></script>
-<script src="cart.js"></script>
+    <script src="samplecart.js"></script>
+    <script>
+      const navLinks = document.getElementById("navLinks");
+
+      function navClose(){
+        navLinks.style.right = "-200px";
+      }
+
+      function navOpen(){
+        navLinks.style.right = "0";
+      }
+    </script>
 </body>
 </html>

@@ -11,23 +11,27 @@
     <script src="bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="shopping-cart.css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <!--This is NavBar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Abalos-Guillermo Optical</a>
-          
-          <a href="location.html" type="button" class="btn btn-outline-light">Branch Location</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto justify-content-center mb-2 mb-lg-0">
+          <a class="navbar-brand" href="index.html">Abalos-Guillermo Optical</a> 
+          <div class="nav-links" id="navLinks">
+            <i class='bx bxs-x-square' onclick="navClose()" id="close"></i>
+            <ul class="navbar-nav">
               <li class="nav-item ms-3">
-                <a class="nav-link active" aria-current="page" href="shopping-cart.html">Shop</a>
+                <a href="location.html" type="button" class="btn btn-outline-light">Branch Location</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link" aria-current="page" href="shopping-cart.html">Shop</a>
               </li>
               <li class="nav-item ms-3 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,21 +42,20 @@
                   <li><a class="dropdown-item" href="women-eyewear.html">Women Eyewear</a></li>
                   <li><a class="dropdown-item" href="kids-eyewear.html">Kids Eyewear</a></li>
                 </ul>
-                <li class="nav-item ms-3">
-                    <a class="nav-link" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAApxJREFUSEuVVv194zAIfWiRJpPUmeSaSZpO0nSSupOcbxHRH5JsgZBsn/9JbH0Aj8cDwt5DALhscP87i+mT/j6+XHYB+kDnXF22xgi8+eVMlENpz8BHa1gHOIiAI19A+APgH4CFiOZ6N0E7pL9X+AAaIdgDjJkvAD4BTOKfZCFDhgXAjYjkNz8j5MpiObeb6XRHjDyB+DvdqCzmk+mDGL3b6DtgFoeGhluHmcUopmrTWk9vjIUCXXc5tm/Y5omZ3wrEKsBi2Ed/IwrzEG+Vib20ZCCZ3wE8BFKGOOXtq2Q9iOjDJ0+FyvWOZl+JuOythu02HWyBWvB+EoW7J5dNXma1Y6D1jjkKiyXHw6caTgR7eqgbw6Ob9LZURoy/G8aVyRr09aprIFpyMB3lMDker29+ZYLx51a5a01ZckktF2LtxTzMcR8H5vjOoIevwUS6Ryik6olPe6O642B7gY45CuwTCK8F8QWEr6pao3tOkUslgrX6eYKszatGdC7eYcT947sC3M1P5ZiulKZJpJOd+irNQUrqZW0QrZiURvEjv4Fo9qz2KFpPlWMxt7+tG7XyoVWsriWaSx1/mG5lDq+s7iAYmSc6EA1dzp3msQBJxax8FkR9ZWRtzkrlNLGnF0q3XZZ5AehOgeZWHj25pN3G3AI9W1wrKq240zyqj0sIdG1nJBexaQijiPdE204mKxx3CuFpRp+2/phFFvGmRP9/Ak/TQJ1SNs9nonCrs1hHMjmyNAOZrTojTsvrVblHKdj2y0B41adNjsWjyOzF6ABa62NnJMpRqMlkdbg2/MO+29Tr9nqCDqZzGXJF5gtBYLYsHRk7/q4YRGFu5+3uDNzmY4j/uZ6gCb0p80EGxzcfN5Kds27pTFs+QbZGml3Ev8diRzXU+CcbAAAAAElFTkSuQmCC"/></a>
+                  <li class="nav-item ms-3">
+                    <a class="nav-link" href="#">Login</a>
                   </li>
-                  <button type="button" class="btn btn-link position-relative">
-                    <i class='bx bxs-shopping-bags'></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      0
-                      <span class="visually-hidden">unread messages</span>
-                    </span>
-                  </button>
+                  <li class="nav-item ms-3">
+                    <i class='bx bxs-shopping-bags'id="cart" ><span class="cart-quantity cart-btn text-light">0</span></i>
+                  </li>
               </li>
             </ul>
           </div>
         </div>
+        <i class='bx bx-menu-alt-right' onclick="navOpen()" id="open"></i>
       </nav>
+
+      <!--this is kids eyewear catalog-->
       <section class="shop-title">
         <h2 class="section-title">Kids Eyewear</h2>
       </section>
@@ -158,6 +161,7 @@
         </div>
       </div>
     </div>
+    <!--This is Footer-->
     <footer class="bg-primary">
       <div class="footer-title">
         <h2 class="email-text text-light">Subscribe to Our Newsletter</h2>
@@ -180,9 +184,9 @@
     <div class="social-icons">
       <h2 class="quick-links">Follow Us</h2>
         <div class="social-logo">
-        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-        <a href="#"><i class='bx bxl-youtube'></i></a>
-        <a href="#"><i class='bx bxl-instagram' ></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+          <a href="#"><i class='bx bxl-instagram' ></i></a>
         </div>
     </div>
     <div class="quick-links">
@@ -197,5 +201,17 @@
       <p>Design by: KodegoPro</p>
     </div>
     </footer>
+    <script src="samplecart.js"></script>
+    <script>
+      const navLinks = document.getElementById("navLinks");
+
+      function navClose(){
+        navLinks.style.right = "-200px";
+      }
+
+      function navOpen(){
+        navLinks.style.right = "0";
+      }
+    </script>
 </body>
 </html>
